@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Form Result</title>
+</head>
+<body style="font-family:Arial; background-color:#f2f2f2; text-align:center;">
+
+   <h2>Submitted Details</h2>
+
+   <p><b>Name:</b> <span id="name"></span></p>
+   <p><b>Email:</b> <span id="email"></span></p>
+   <p><b>Favourite Player:</b> <span id="player"></span></p>
+
+   <script>
+      const params = new URLSearchParams(window.location.search);
+      document.getElementById("name").textContent = params.get("name");
+      document.getElementById("email").textContent = params.get("email");
+      document.getElementById("player").textContent = params.get("player");
+   </script>
+
+</body>
+</html>
