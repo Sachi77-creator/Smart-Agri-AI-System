@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+  <meta charset="UTF-8"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <title>Student Manager</title> 
+
+  <link rel="stylesheet" href="s2.css"> 
+
+</head> 
+
+<body> 
+
+  <header> 
+
+    <h1>Student Management System🧑‍🎓</h1> 
+
+    <p>Manage your students efficiently</p> 
+
+  </header> 
+
+  <main> 
+
+    <section class="form-section"> 
+
+      <h2>Add a New Student</h2> 
+
+      <form id="studentForm"> 
+
+        <input type="text" id="name" placeholder="Student Name" required> 
+
+        <input type="number" id="age" placeholder="Age" min="4" max="24" required> 
+
+        <input type="text" id="course" placeholder="Course" required> 
+
+        <button type="button" onclick="addStudent()">Add Student</button> 
+
+      </form> 
+
+    </section> 
+
+    <section class="student-section"> 
+
+      <h2>Student List</h2> 
+
+      <div id="studentList"></div> 
+
+    </section> 
+
+  </main> 
+
+  <footer> 
+
+    <p>&copy; 2025 Student Manager. All rights reserved.</p> 
+
+  </footer> 
+
+  <script src="s3.js"></script> 
+
+</body> 
+
+</html> 
