@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Library Record Management System</title>
+    <link rel="stylesheet" href="libr.css" />
+</head>
+<body>
+<h1>Library Record Management System📘</h1>
+<div class="search-box">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by book title"
+        onkeyup="searchBooks()"
+    />
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>Book ID</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year</th>
+            <th>Status</th>
+            <th>Borrow</th> 
+        </tr>
+    </thead>
+    <tbody id="bookTable"></tbody>
+</table>
+<h2>Add New Book</h2>
+<div class="form">
+    <input type="text" id="id" placeholder="Book ID" />
+    <input type="text" id="title" placeholder="Title" />
+    <input type="text" id="author" placeholder="Author" />
+    <input type="number" id="year" placeholder="Year" />
+    <button onclick="saveBook()">Add Book</button>
+</div>
+<script src="libra.js"></script>
+</body>
+</html>

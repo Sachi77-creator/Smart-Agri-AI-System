@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <book>
+        <id>201</id>
+        <title>The Alchemist</title>
+        <author>Paulo Coelho</author>
+        <category>Fiction</category>
+        <year>1988</year>
+        <status>Available</status>
+    </book>
+    <book>
+        <id>202</id>
+        <title>Clean Code</title>
+        <author>Robert C. Martin</author>
+        <category>Programming</category>
+        <year>2008</year>
+        <status>Available</status>
+    </book>
+    <book>
+        <id>203</id>
+        <title>Harry Potter</title>
+        <author>J. K. Rowling</author>
+        <category>Fantasy</category>
+        <year>1997</year>
+        <status>Available</status>
+    </book>
+    <book>
+        <id>204</id>
+        <title>Introduction to Algorithms</title>
+        <author>Thomas H. Cormen</author>
+        <category>Education</category>
+        <year>2009</year>
+        <status>Available</status>
+    </book>
+    <book>
+        <id>205</id>
+        <title>Think and Grow Rich</title>
+        <author>Napoleon Hill</author>
+        <category>Self Help</category>
+        <year>1937</year>
+        <status>Available</status>
+    </book>
+</library>
+
