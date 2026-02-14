@@ -1,0 +1,18 @@
+{
+   "t1": 
+    {
+         "text": "Complete homework", 
+         "completed": false 
+    },
+   "t2": 
+    {      
+         "text": "Read a book", 
+         "completed": false 
+    },
+    "t3":
+     { 
+        "text": "Buy groceries",
+        "completed": false
+     }
+}
+  
