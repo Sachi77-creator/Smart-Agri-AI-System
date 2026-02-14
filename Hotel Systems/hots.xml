@@ -1,0 +1,19 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<hotel>
+   <room>
+      <type>Single</type>
+      <price>1000</price>
+      <status>Available</status>
+    </room>
+    <room>
+        <type>Double</type>
+        <price>2000</price>
+        <status>Available</status>
+    </room>
+
+    <room>
+        <type>Deluxe</type>
+        <price>3500</price>
+        <status>Available</status>
+    </room>
+</hotel>
