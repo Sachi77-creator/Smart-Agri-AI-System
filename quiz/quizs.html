@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Interactive Quiz</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f2f2f2;
+    padding: 20px;
+}
+
+.quiz-box {
+    background: white;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+h2 { text-align:center; }
+
+.question {
+    margin-bottom: 15px;
+}
+
+input, select, textarea {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    width: 100%;
+}
+
+button {
+    padding: 10px 15px;
+    background: #2c7be5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1a5fb4;
+}
+
+#timer {
+    font-size: 20px;
+    color: green;
+    font-weight: bold;
+}
+
+.warning {
+    background: #ffcccc;
+    color: red;
+    padding: 8px;
+    margin-top: 10px;
+    display: none;
+}
+
+.result {
+    margin-top: 20px;
+    background: #e8f5e9;
+    padding: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="quiz-box">
+
+<h2>Quiz App</h2>
+
+<div>Time Left: <span id="timer">30</span> sec</div>
+<div id="warning" class="warning">⚠ Only 5 seconds left!</div>
+
+<form id="quizForm">
+
+<!-- Radio -->
+<div class="question">
+<p>1. JavaScript is?</p>
+<label><input type="radio" name="q1" value="a"> Programming Language</label><br>
+<label><input type="radio" name="q1" value="b"> Database</label>
+</div>
+
+<!-- Select -->
+<div class="question">
+<p>2. HTML stands for:</p>
+<select name="q2">
+<option value="">Select</option>
+<option value="a">Hyper Text Markup Language</option>
+<option value="b">High Tool Machine Language</option>
+</select>
+</div>
+
+<!-- Checkbox -->
+<div class="question">
+<p>3. Which are JavaScript frameworks?</p>
+<label><input type="checkbox" name="q3" value="react"> React</label>
+<label><input type="checkbox" name="q3" value="angular"> Angular</label>
+<label><input type="checkbox" name="q3" value="html"> HTML</label>
+</div>
+
+<!-- Text box -->
+<div class="question">
+<p>4. CSS is used for?</p>
+<input type="text" name="q4">
+</div>
+
+<!-- Text area -->
+<div class="question">
+<p>5. Write one frontend technology:</p>
+<textarea name="q5"></textarea>
+</div>
+
+<button type="button" onclick="submitQuiz()">Submit</button>
+
+</form>
+
+<div id="result" class="result"></div>
+
+</div>
+
+<script>
+let timeLeft = 30;
+const timer = document.getElementById("timer");
+const warning = document.getElementById("warning");
+let timerInterval = setInterval(updateTimer,1000);
+
+function updateTimer() {
+    timeLeft--;
+    timer.textContent = timeLeft;
+
+    if(timeLeft === 5){
+        warning.style.display = "block";
+    }
+    if(timeLeft <= 0){
+        clearInterval(timerInterval);
+        submitQuiz();
+    }
+}
+
+function submitQuiz(){
+
+    clearInterval(timerInterval);
+
+    let score = 0;
+
+    const form = document.forms["quizForm"];
+
+    // Correct answers
+    if(form.q1.value === "a") score++;
+    if(form.q2.value === "a") score++;
+
+    let checks = document.querySelectorAll('input[name="q3"]:checked');
+    let values = Array.from(checks).map(c=>c.value);
+    if(values.includes("react") && values.includes("angular") && values.length===2)
+        score++;
+
+    if(form.q4.value.toLowerCase().includes("style"))
+        score++;
+
+    if(form.q5.value.trim() !== "")
+        score++;
+
+    
+
+    if(form.q4.value.toLowerCase().includes("style"))
+        score++;
+
+    if(form.q5.value.trim() !== "")
+        score++;
+
+    document.getElementById("result").innerHTML =
+        "<h3>Your Score: " + score + "/5</h3>" +
+        "<p><b>Correct Answers:</b><br>" +
+        "1) Programming Language<br>" +
+        "2) Hyper Text Markup Language<br>" +
+        "3) React & Angular<br>" +
+        "4) Styling / Design<br>" +
+        "5) Example: HTML, CSS, JavaScript</p>";
+}
+</script>
+
+</body>
+</html>

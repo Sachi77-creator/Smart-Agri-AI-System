@@ -12,7 +12,6 @@ fetch("hots.xml")
                 price: roomNode.getElementsByTagName("price")[0].textContent,
                 status: roomNode.getElementsByTagName("status")[0].textContent
             };
-
             rooms.push(room);
         }
         displayRooms(rooms);

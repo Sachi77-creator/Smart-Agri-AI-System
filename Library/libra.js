@@ -85,9 +85,9 @@ function searchBooks() {
         displayBooks(books); 
         return;
     }
-    const filtered = books.filter((book) =>
-        book.title.toLowerCase().includes(keyword)
-    );
+    const filtered=books.filter((book)=>{
+       return  book.title.toLowerCase().includes(keyword);
+    });
     displayBooks(filtered);
 }
 

@@ -10,6 +10,6 @@ textarea.addEventListener("input", () => {
 
     if (currentLength > maxLength) {
         alert(`You cannot type more than ${maxLength} characters!`);
-        textarea.value = textarea.value.substring(0, maxLength);
+        textarea.value = "";
     }
 });
