@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sachin | Portfolio</title>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+    --bg:#0f2027;
+    --text:white;
+    --card:rgba(255,255,255,0.1);
+}
+
+.light{
+    --bg:#f4f4f4;
+    --text:#222;
+    --card:white;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,var(--bg),#203a43,#2c5364);
+    color:var(--text);
+    transition:0.5s;
+}
+
+header{
+    text-align:center;
+    padding:80px 20px;
+}
+
+#typing{
+    font-size:42px;
+    font-weight:bold;
+}
+
+.social-icons{
+    margin-top:20px;
+}
+
+.social-icons a{
+    margin:0 15px;
+    font-size:28px;
+    color:var(--text);
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    color:#00f2fe;
+    transform:scale(1.2);
+}
+
+.resume-btn{
+    display:inline-block;
+    margin:15px 10px 0 10px;
+    padding:10px 20px;
+    background:#00f2fe;
+    color:#000;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.resume-btn:hover{
+    transform:scale(1.1);
+    background:#4facfe;
+}
+
+nav{
+    text-align:center;
+    padding:15px;
+    background:rgba(0,0,0,0.3);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+}
+
+nav a{
+    color:var(--text);
+    margin:0 20px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.toggle-btn{
+    position:absolute;
+    right:20px;
+    top:20px;
+    padding:8px 15px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+section{
+    padding:60px 10%;
+}
+
+h2{
+    margin-bottom:20px;
+    border-left:5px solid #00f2fe;
+    padding-left:10px;
+}
+
+.card{
+    background:var(--card);
+    padding:20px;
+    margin:20px 0;
+    border-radius:15px;
+    backdrop-filter:blur(15px);
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.project-img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.links a{
+    display:inline-block;
+    margin-right:15px;
+    color:#00f2fe;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:rgba(0,0,0,0.4);
+}
+</style>
+</head>
+
+<body>
+
+<button class="toggle-btn" onclick="toggleMode()">Toggle Mode</button>
+
+<header>
+    <h1 id="typing"></h1>
+    <p>Aspiring Software Engineer | Java | Web Developer</p>
+
+    <!-- Social Icons -->
+    <div class="social-icons">
+        <a href="https://github.com/Sachi77-creator" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+
+        <!-- Replace with your real LinkedIn link -->
+        <a href="https://www.linkedin.com/in/sachin-senthilkumar-4b8b93373?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+
+    <!-- Resume Buttons -->
+    <div>
+        <a href="Resume.pdf" target="_blank" class="resume-btn">
+            <i class="fas fa-file"></i> View Resume
+        </a>
+
+        <a href="Resume.pdf" download class="resume-btn">
+            <i class="fas fa-download"></i> Download Resume
+        </a>
+    </div>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+<h2>About Me</h2>
+<div class="card">
+Passionate Computer Science student with strong skills in Java, C++, and Web Development.
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+
+<div class="card">
+<img src="https://source.unsplash.com/600x300/?library,books" class="project-img">
+<h3>Library Management System</h3>
+<p>My first web development project built to manage library books, student records, issue/return tracking, and due dates using a simple and user-friendly interface.</p>
+<div class="links">
+<a href="https://github.com/Sachi77-creator/FullStack-Projects/tree/main/Library" target="_blank">
+<i class="fab fa-github"></i> GitHub
+</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/600x300/?hotel,management" class="project-img">
+<h3>Hotel Management System</h3>
+<p>A full-stack web application built using HTML, CSS, JavaScript, and MySQL to manage room reservations, guest records, check-in/check-out tracking, and billing operations efficiently.</p>
+<div class="links">
+<a href="https://github.com/Sachi77-creator/FullStack-Projects/tree/main/Hotel%20Systems" target="_blank">
+<i class="fab fa-github"></i> GitHub
+</a>
+</div>
+</div>
+
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="card">
+Email: sachin22062006@gmail.com <br><br>
+
+<a href="https://github.com/Sachi77-creator" target="_blank">
+<i class="fab fa-github"></i> GitHub
+</a>
+<br><br>
+
+<a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME" target="_blank">
+<i class="fab fa-linkedin"></i> LinkedIn
+</a>
+</div>
+</section>
+
+<footer>
+© 2026 Sachin Senthilkumar
+</footer>
+
+<script>
+// Typing animation
+const text = "Sachin Senthilkumar";
+let index = 0;
+
+function typeEffect(){
+    if(index < text.length){
+        document.getElementById("typing").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect,100);
+    }
+}
+typeEffect();
+
+// Dark/Light toggle
+function toggleMode(){
+    document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>
