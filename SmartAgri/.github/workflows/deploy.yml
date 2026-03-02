@@ -1,0 +1,24 @@
+﻿name: Deploy Smart Agriculture System
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Deploy to Azure VM via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USER }}
+          key: ${{ secrets.VM_SSH_KEY }}
+          script: |
+            cd /home/Sachin/backend
+            git fetch --all
+            git reset --hard origin/main
+            sudo fuser -k 5000/tcp || true
+            nohup python3 app.py > /dev/null 2>&1 &
+            echo "Smart Agri System successfully updated on Azure VM!"
